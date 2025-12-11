@@ -1,8 +1,13 @@
-const express = require('express'); // we telling our program that we require express package
+const express = require('express');
+const aiRoutes = require('./routes/ai.routes');
 
-const app = express() // creating a new instance of express 
-app.get('/', (req,res) => {
-    res.send("hello world")
-})
+const app = express();
 
-module.exports = app
+app.get('/', (req, res) => {
+    res.send("hello world");
+});
+
+// fix your mount path: must start with "/"
+app.use("/ai", aiRoutes);
+
+module.exports = app;
