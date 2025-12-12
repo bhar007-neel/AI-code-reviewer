@@ -24,11 +24,6 @@
 
 <hr />
 
-<!-- ========================= -->
-<!-- Screenshot Section       -->
-<!-- ========================= -->
-
-<h2>📸 Preview</h2>
 
 <p align="center">
   <!-- Replace the src with your actual image path -->
