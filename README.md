@@ -25,17 +25,6 @@
 <hr />
 
 
-<p align="center">
-  <!-- Replace the src with your actual image path -->
-  <img 
-    src="assets/preview.png" 
-    alt="AI Code Reviewer Screenshot" 
-    width="90%" 
-    style="border-radius: 10px; border: 1px solid #333;"
-  />
-</p>
-
-<hr />
 
 <!-- ========================= -->
 <!-- What It Does             -->
