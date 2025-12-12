@@ -1,16 +1,24 @@
-const express = require('express');
-const aiRoutes = require('./routes/ai.routes');
-const cors= require('cors');
+const express = require("express");
+const cors = require("cors");
+const aiRoutes = require("./routes/ai.routes");
 
 const app = express();
-app.use(express.json());
-app.use(cors())
 
-app.get('/', (req, res) => {
-    res.send("hello world");
+app.use(express.json());
+
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://ai-code-reviewer-kcte.onrender.com"
+  ],
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type"]
+}));
+
+app.get("/", (req, res) => {
+  res.send("hello world");
 });
 
-// fix your mount path: must start with "/"
 app.use("/ai", aiRoutes);
 
 module.exports = app;
