@@ -5,7 +5,7 @@ async function aiService(userCode) {
     const res = await axios.post(
       "https://api.groq.com/openai/v1/chat/completions",
       {
-        model: "openai/gpt-oss-120b",
+        model: "llama-3.1-8b-instant",
         messages: [{ role: "system", content: ` Here’s a solid system instruction for your AI code reviewer:
 
                 AI System Instruction: Senior Code Reviewer (7+ Years of Experience)
