@@ -49,11 +49,51 @@ function App() {
     }
   }
 
+  const RobotSVG = () => (
+    <svg viewBox="0 0 200 200" className="robot-svg">
+      {/* Head */}
+      <rect x="60" y="30" width="80" height="80" rx="5" fill="#ff0000" opacity="0.15" stroke="#ff0000" strokeWidth="2"/>
+      {/* Eyes */}
+      <circle cx="80" cy="55" r="8" fill="#ff0000" opacity="0.3"/>
+      <circle cx="120" cy="55" r="8" fill="#ff0000" opacity="0.3"/>
+      {/* Mouth */}
+      <path d="M 80 75 L 120 75" stroke="#ff0000" strokeWidth="2" opacity="0.3"/>
+      {/* Body */}
+      <rect x="65" y="120" width="70" height="60" rx="5" fill="#ff0000" opacity="0.1" stroke="#ff0000" strokeWidth="2"/>
+      {/* Arms */}
+      <rect x="20" y="135" width="40" height="15" rx="7" fill="#ff0000" opacity="0.15" stroke="#ff0000" strokeWidth="2"/>
+      <rect x="140" y="135" width="40" height="15" rx="7" fill="#ff0000" opacity="0.15" stroke="#ff0000" strokeWidth="2"/>
+      {/* Legs */}
+      <rect x="75" y="185" width="15" height="30" rx="7" fill="#ff0000" opacity="0.15" stroke="#ff0000" strokeWidth="2"/>
+      <rect x="110" y="185" width="15" height="30" rx="7" fill="#ff0000" opacity="0.15" stroke="#ff0000" strokeWidth="2"/>
+    </svg>
+  )
+
   return (
     <div className="app-container">
       {/* Agents Carousel at Top */}
       <div className="agents-top">
+        <div className="robot-background">
+          <RobotSVG />
+        </div>
         <div className="agents-carousel">
+          <div className="agent-display">
+            <div className="agent-icon-large">{agents[activeAgent].icon}</div>
+            <div className="agent-text">
+              <div className="agent-name">{agents[activeAgent].name}</div>
+              <div className="agent-status">{agents[activeAgent].description}</div>
+            </div>
+          </div>
+          <div className="agents-progress">
+            {agents.map((_, index) => (
+              <div 
+                key={index}
+                className={`progress-dot ${index === activeAgent ? 'active' : ''} ${index < activeAgent ? 'completed' : ''}`}
+              ></div>
+            ))}
+          </div>
+        </div>
+      </div>
           <div className="agent-display">
             <div className="agent-icon-large">{agents[activeAgent].icon}</div>
             <div className="agent-text">
