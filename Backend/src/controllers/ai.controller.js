@@ -5,7 +5,14 @@ exports.getReview = async (req,res)=>{
     if(!code){
         return res.status(400).send("prompt is required")
     }
-    const response = await aiService(code);
-
-    res.send(response);
+    try {
+        const response = await aiService(code);
+        res.send(response);
+    } catch (error) {
+        console.error("Controller Error:", error);
+        res.status(500).json({
+            error: error.message,
+            details: error.response?.data || "No additional details"
+        });
+    }
 }

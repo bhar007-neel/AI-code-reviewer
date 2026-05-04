@@ -1,8 +1,9 @@
 const axios = require("axios");
 
 async function aiService(userCode) {
-  try {
-    const res = await axios.post(
+  try {    console.log("API Key present:", !!process.env.GROQ_API_KEY);
+    console.log("API Key length:", process.env.GROQ_API_KEY?.length);
+        const res = await axios.post(
       "https://api.groq.com/openai/v1/chat/completions",
       {
         model: "llama-3.1-8b-instant",
@@ -89,8 +90,10 @@ async function aiService(userCode) {
     return res.data.choices[0].message.content;
 
   } catch (err) {
-    console.error("Groq API Error:", err.response?.data || err.message);
-    throw new Error("Failed to generate AI content");
+    console.error("Groq API Error Status:", err.response?.status);
+    console.error("Groq API Error Data:", err.response?.data);
+    console.error("Groq API Error Message:", err.message);
+    throw err;
   }
 }
 
