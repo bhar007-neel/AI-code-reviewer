@@ -116,8 +116,8 @@ function App() {
                 fontSize: 15,
                 lineHeight: 1.8,
                 color: '#ffffff',
-                backgroundColor: '#0a0a0a',
-                caretColor: '#ff0000'
+                backgroundColor: '#1e1e2e',
+                caretColor: '#4caf50'
               }}
             />
           </div>
