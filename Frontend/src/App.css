@@ -224,6 +224,18 @@ html, body, #root {
   color: #ffffff !important;
 }
 
+.code-editor,
+.code-editor pre,
+.code-editor textarea,
+.code-editor code {
+  color: #ffffff !important;
+  background: #0a0a0a !important;
+}
+
+.code-editor * {
+  color: #ffffff !important;
+}
+
 .code-editor pre {
   background: #0a0a0a !important;
   color: #ffffff !important;
@@ -241,7 +253,11 @@ html, body, #root {
   background: transparent !important;
 }
 
-/* Syntax Highlighting */
+/* Force white text for all tokens */
+.code-editor .token {
+  color: #ffffff !important;
+}
+
 .code-editor .token.string {
   color: #a8e6a8 !important;
 }
