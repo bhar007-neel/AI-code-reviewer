@@ -115,9 +115,9 @@ function App() {
                 fontFamily: '"Courier New", monospace',
                 fontSize: 15,
                 lineHeight: 1.8,
-                color: '#ffffff',
-                backgroundColor: '#1e1e2e',
-                caretColor: '#4caf50'
+                color: '#1b5e20',
+                backgroundColor: '#f0f7f4',
+                caretColor: '#43a047'
               }}
             />
           </div>

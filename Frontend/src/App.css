@@ -218,75 +218,75 @@ html, body, #root {
   flex: 1;
   overflow: hidden;
   padding: 0;
-  background: #1e1e2e;
+  background: #f0f7f4;
 }
 
 .code-editor-wrapper * {
-  color: #ffffff !important;
-  background-color: #1e1e2e !important;
+  color: #1b5e20 !important;
+  background-color: #f0f7f4 !important;
 }
 
 .code-editor-wrapper pre[class*="language-"] {
-  background: #1e1e2e !important;
-  color: #ffffff !important;
+  background: #f0f7f4 !important;
+  color: #1b5e20 !important;
 }
 
 .code-editor {
   height: 100% !important;
   width: 100% !important;
-  background: #1e1e2e !important;
+  background: #f0f7f4 !important;
   padding: 1.5rem !important;
   font-size: 15px !important;
   line-height: 1.8 !important;
-  color: #ffffff !important;
+  color: #1b5e20 !important;
 }
 
 .code-editor div {
-  color: #ffffff !important;
+  color: #1b5e20 !important;
 }
 
 .code-editor textarea,
 .code-editor pre {
-  color: #ffffff !important;
-  background: #1e1e2e !important;
+  color: #1b5e20 !important;
+  background: #f0f7f4 !important;
   font-family: 'Courier New', monospace !important;
 }
 
 .code-editor textarea {
-  caret-color: #4caf50 !important;
+  caret-color: #43a047 !important;
 }
 
 .code-editor pre code {
-  color: #ffffff !important;
+  color: #1b5e20 !important;
   background: transparent !important;
 }
 
 .code-editor .token {
-  color: #ffffff !important;
+  color: #1b5e20 !important;
 }
 
 .code-editor .token.string {
-  color: #81c784 !important;
+  color: #2e7d32 !important;
 }
 
 .code-editor .token.function {
-  color: #ffb74d !important;
+  color: #ff9800 !important;
 }
 
 .code-editor .token.keyword {
-  color: #64b5f6 !important;
+  color: #1976d2 !important;
 }
 
 .code-editor .token.number {
-  color: #ba68c8 !important;
+  color: #7b1fa2 !important;
 }
 
 .code-editor .token.comment {
-  color: #616161 !important;
+  color: #90a4ae !important;
 }
 
 .code-editor .token.boolean {
-  color: #f48fb1 !important;
+  color: #d32f2f !important;
 }
 
 /* Review Button */
@@ -457,8 +457,8 @@ html, body, #root {
 }
 
 .markdown-content pre {
-  background: #1e1e2e;
-  border: 1px solid #e0f2f1;
+  background: #f0f7f4;
+  border: 1px solid #c8e6c9;
   border-radius: 8px;
   padding: 1.2rem !important;
   overflow-x: auto;
@@ -467,7 +467,7 @@ html, body, #root {
 
 .markdown-content pre code {
   background: transparent;
-  color: #ffffff;
+  color: #1b5e20;
   padding: 0;
   border-radius: 0;
 }
