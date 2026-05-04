@@ -113,9 +113,11 @@ function App() {
               className="code-editor"
               style={{
                 fontFamily: '"Courier New", monospace',
-                fontSize: 14,
-                lineHeight: 1.6,
-                color: '#ffffff'
+                fontSize: 15,
+                lineHeight: 1.8,
+                color: '#ffffff',
+                backgroundColor: '#0a0a0a',
+                caretColor: '#ff0000'
               }}
             />
           </div>

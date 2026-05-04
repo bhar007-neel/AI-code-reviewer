@@ -214,9 +214,20 @@ html, body, #root {
   background: #0a0a0a;
 }
 
+.code-editor-wrapper * {
+  color: #ffffff !important;
+  background-color: #0a0a0a !important;
+}
+
+/* Override prism styles */
+.code-editor-wrapper pre[class*="language-"] {
+  background: #0a0a0a !important;
+  color: #ffffff !important;
+}
+
 .code-editor {
-  height: 100%;
-  width: 100%;
+  height: 100% !important;
+  width: 100% !important;
   background: #0a0a0a !important;
   padding: 1.5rem !important;
   font-size: 15px !important;
@@ -224,27 +235,18 @@ html, body, #root {
   color: #ffffff !important;
 }
 
-.code-editor,
-.code-editor pre,
+.code-editor div {
+  color: #ffffff !important;
+}
+
 .code-editor textarea,
-.code-editor code {
-  color: #ffffff !important;
-  background: #0a0a0a !important;
-}
-
-.code-editor * {
-  color: #ffffff !important;
-}
-
 .code-editor pre {
-  background: #0a0a0a !important;
   color: #ffffff !important;
+  background: #0a0a0a !important;
+  font-family: 'Courier New', monospace !important;
 }
 
 .code-editor textarea {
-  font-family: 'Courier New', monospace !important;
-  background: #0a0a0a !important;
-  color: #ffffff !important;
   caret-color: #ff0000 !important;
 }
 
@@ -253,7 +255,6 @@ html, body, #root {
   background: transparent !important;
 }
 
-/* Force white text for all tokens */
 .code-editor .token {
   color: #ffffff !important;
 }
