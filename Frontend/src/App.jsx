@@ -94,23 +94,6 @@ function App() {
           </div>
         </div>
       </div>
-          <div className="agent-display">
-            <div className="agent-icon-large">{agents[activeAgent].icon}</div>
-            <div className="agent-text">
-              <div className="agent-name">{agents[activeAgent].name}</div>
-              <div className="agent-status">{agents[activeAgent].description}</div>
-            </div>
-          </div>
-          <div className="agents-progress">
-            {agents.map((_, index) => (
-              <div 
-                key={index}
-                className={`progress-dot ${index === activeAgent ? 'active' : ''} ${index < activeAgent ? 'completed' : ''}`}
-              ></div>
-            ))}
-          </div>
-        </div>
-      </div>
 
       {/* Main Content */}
       <main className="main-content">
